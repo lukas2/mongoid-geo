@@ -6,7 +6,7 @@ module Mongoid #:nodoc:
 
         # minimum query
         query = {
-          :geoNear  => klass.to_s.tableize,
+          :geoNear  => klass.to_s.tableize.gsub("/","_"),
           :near     => center, 
         }
         
